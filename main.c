@@ -16,23 +16,30 @@ int main(void)
     puts(text);
     
 
-    for (int i = 0; i < text_size; i++) {
-        for (int j = 0; j < alph_size; j++) {
-            if(text[i] == alph[j]) {
+    for (int i = 0; i < text_size; i++) 
+    {
+        for (int j = 0; j < alph_size; j++) 
+        {
+            if(text[i] == alph[j]) 
+            {
                 n[i] = j+1;
                 continue;
             }
         }
     }
 
-    for(int i = 0; i < n_size - 1; i++) {
+    for(int i = 0; i < n_size - 1; i++) 
+    {
         pos = i;
-        for (int j = i+1; j < n_size; j++) {
-            if(n[pos] > n[j]) {
+        for (int j = i+1; j < n_size; j++) 
+        {
+            if(n[pos] > n[j]) 
+            {
                 pos = j;
             }
         }
-        if(pos != i) {
+        if(pos != i) 
+        {
             int t = n[i];
             n[i] = n[pos];
             n[pos] = t;
@@ -41,7 +48,8 @@ int main(void)
     
     
     printf("\nsorted text: ");
-    for (int i = 0; i < n_size; i++) {
+    for (int i = 0; i < n_size; i++) 
+    {
         printf("%c", alph[n[i]-1]);
     }
     printf("\n\n");
